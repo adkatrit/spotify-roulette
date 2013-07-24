@@ -10,7 +10,9 @@
     "jade": "*",
     "twit": "~1.1.8",
     "redis": "~0.8.4",
-    "spotify.js": "0.0.1"
+    "spotify.js": "0.0.1",
+    "jQuery": "~1.7.4",
+    "xmlhttprequest": "~1.6.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

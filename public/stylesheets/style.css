@@ -6,6 +6,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+html{
+height: 100%;
+}
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'Flat-UI-Icons';
@@ -417,7 +421,14 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 14px;
   line-height: 1.231;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #aaaaaa), color-stop(100%, #444444));
+  background-image: -webkit-radial-gradient(#aaaaaa, #444444);
+  background-image: -moz-radial-gradient(#aaaaaa, #444444);
+  background-image: -o-radial-gradient(#aaaaaa, #444444);
+  background-image: radial-gradient(#aaaaaa, #444444);
 }
+
+
 input,
 button,
 select,
@@ -3870,5 +3881,5 @@ body.vjs-full-window {
 .center {
   margin:auto auto;
   text-align:center;
-  margin-top: 217px;
+  margin-top: 20%;
 }

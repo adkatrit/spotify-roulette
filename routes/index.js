@@ -11,18 +11,32 @@ exports.index = function(req, res){
 
 exports.rando = function(req, res){
 	var rando_key = [
-		'red',
-		'orange',
-		'yellow',
-		'green',
-		'blue',
-		'indigo',
-		'violet',
-		'dark',
-		'light',
-		'remix',
-		'funk',
-		'twang'
+	  "nappy",
+  "massive",
+  "blue",
+  "melissa",
+  "dark",
+  "enigma",
+  "swollen",
+  "immortal",
+  "light",
+ "red",
+"charlie",
+"ibiza",
+"gates",
+"mushroom",
+"funk",
+"synth",
+"washed",
+"bt",
+"shadow",
+"green",
+"field",
+"aqua",
+ "pdp",
+ "slurp",
+ "remix"
+
 	];
 	var rand_pick = rando_key[ Math.floor(Math.random()*(rando_key.length-1)) ];
 

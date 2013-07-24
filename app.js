@@ -55,38 +55,42 @@ function slurp_artist(name){
 
 }
 function slurp_search(name){
+try{
   spotify.tracks(name).forEach(function(track) {
       if (track === null) {
           // finished
       } else {
         if(typeof track.href !='undefined'){
-          redis.sadd(  name , track.href.split(':')[2], console.log);  
+          if(track.album.availability.territories.indexOf('US') != -1){
+            redis.sadd(  name , track.href.split(':')[2], console.log);  
+
+          }
         }
-        
       }
   });
+}catch(e){
+console.log(e);
+}
 }
 
 
-
-//[
-// 'red',
-// 'orange',
-// 'yellow',
-// 'green',
-// 'blue',
-// 'indigo',
-// 'violet',
-// 'dark',
-// 'light',
-// 'remix'
-//'funk',
-//'twang'
-//].forEach(slurp);
+/*
+[
+'shadow',
+'field',
+'mushroom',
+'synth',
+'nappy',
+'pdp',
+'washed',
+'gates',
+'immortal',
+'massive'
+].forEach(slurp_search);
 
 
 
-
+*/
 
 
 
