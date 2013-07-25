@@ -4,9 +4,34 @@ spotify-roulette
 A button that opens a completely random spotify track.
 
 
+
 The code is a little messy but it's short and sweet. 
 [Spotify Roulette](http:/dream.ai)
 
 
 First you run slurp.js to connect the urbandictionary.com/random.php result to the search function of spotify.
 the results are then streamed to redis for your listening pleasure.
+
+
+I use this for monitoring
+```bash
+watch -n1 'redis-cli scard total_rando && free -m'
+```
+
+This will show you, every second, the total tracks you've slurped and your current ram usage
+```bash
+Every 1.0s: redis-cli scard total_rando && free -m                                                                                                                                                                                          Thu Jul 25 02:16:22 2013
+
+1082631
+             total       used       free     shared    buffers     cached
+Mem:           590        415        174          0          7         65
+-/+ buffers/cache:        342        248
+Swap:            0          0          0
+
+
+```
+
+*How I do it
+I use urbandictionary.com/random.php to search spotify and stream the results to a set in redis.
+When you click for a random song, it is issuing the redis command [SRANDMEMBER](http://redis.io/commands/srandmember)
+and returning the result(a spotify url) to some javascript, which then opens a window for you.
