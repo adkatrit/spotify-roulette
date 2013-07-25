@@ -24,7 +24,8 @@ function get_urb(cb){
 function store_in_set(track){
   if(typeof track.href !='undefined'){
     if(track.album.availability.territories.indexOf('US') != -1){
-      redis.sadd(  'total_rando' , track.href.split(':')[2], function(){});  
+      redis.sadd(  'total_rando' , track.href.split(':')[2], function(){});
+      
     }
   }
 }
@@ -32,17 +33,19 @@ function store_in_set(track){
 function slurp_search(){
   get_urb(function(rand){
     try{
-      var timeout = 0;
-      var done = false;
       spotify.tracks(rand).forEach(function(track) {
         if (track === null) {
-            slurp_search();
+          //end of search result list
+          slurp_search();
+          
         } else {
           store_in_set(track);
+          
         }
       });
     }catch(e){
      console.log(e);
+     
     }
   });
 }
