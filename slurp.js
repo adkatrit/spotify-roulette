@@ -24,8 +24,7 @@ function get_urb(cb){
 function store_in_set(track){
   if(typeof track.href !='undefined'){
     if(track.album.availability.territories.indexOf('US') != -1){
-      redis.sadd(  'total_rando' , track.href.split(':')[2], function(){});
-      
+      redis.sadd(  'total_rando' , track.href.split(':')[2], function(){});  
     }
   }
 }
@@ -45,10 +44,10 @@ function slurp_search(){
       });
     }catch(e){
      console.log(e);
-     
     }
   });
 }
 
 process.on('uncaughtException',console.log);
 slurp_search();
+

@@ -20,3 +20,17 @@ exports.rando = function(req, res){
 		}
 	});
 }
+
+exports.random = function(req, res){
+
+	redis.srandmember('total_rando',function(err,random_song){
+		if(!err && random_song != null){
+			res.writeHead(302, {
+			  'Location': 'http://open.spotify.com/track/'+random_song
+			});
+			res.end();
+		}else{
+			res.end('there was a problem');
+		}
+	});
+}

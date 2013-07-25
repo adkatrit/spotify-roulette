@@ -3882,10 +3882,6 @@ body.vjs-full-window {
   margin:auto auto;
   text-align:center;
   margin-top: 20%;
-height: 105px;
-width: 388px;
-background-color: rgba(0,0,0,0.1);
-border-radius: 4px;
-padding: 10px;
-padding-bottom: 45px;
+  height: 105px;
+  width: 388px;
 }

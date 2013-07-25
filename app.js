@@ -26,6 +26,7 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/rando', routes.rando);
+app.get('/random', routes.random);
 
 
 http.createServer(app).listen(app.get('port'), function(){
