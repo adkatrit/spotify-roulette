@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -35,62 +34,3 @@ app.get('/rando', routes.rando);
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
-
-// spotify.artists('swollen members', function(err, artists) {
-//     console.log('Artists results:', artists);
-
-//     spotify.albums('bad dreams', function(err, albums) {
-//         console.log('Album results:', albums);
-
-        // spotify.tracks('Bad Dreams', function(err, tracks) {
-        //     console.log('Track results:', tracks);
-        // });
-//     });
-// });
-// Or, stream results as they arrive ...
-function slurp_artist(name){
-  spotify.artists( name, function(err, artists) {
-    console.log('Artists results:', artists);
-  });
-
-}
-function slurp_search(name){
-try{
-  spotify.tracks(name).forEach(function(track) {
-      if (track === null) {
-          // finished
-      } else {
-        if(typeof track.href !='undefined'){
-          if(track.album.availability.territories.indexOf('US') != -1){
-            redis.sadd(  name , track.href.split(':')[2], console.log);  
-
-          }
-        }
-      }
-  });
-}catch(e){
-console.log(e);
-}
-}
-
-
-/*
-[
-'shadow',
-'field',
-'mushroom',
-'synth',
-'nappy',
-'pdp',
-'washed',
-'gates',
-'immortal',
-'massive'
-].forEach(slurp_search);
-
-
-
-*/
-
-
-
