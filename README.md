@@ -31,7 +31,7 @@ Swap:            0          0          0
 
 ```
 
-*How I do it
-I use urbandictionary.com/random.php to search spotify and stream the results to a set in redis.
+#How It does it
+It uses urbandictionary.com/random.php and instead of following the 302 redirect to a random page, It searches spotify and streams the result to a set in redis.
 When you click for a random song, it is issuing the redis command [SRANDMEMBER](http://redis.io/commands/srandmember)
 and returning the result(a spotify url) to some javascript, which then opens a window for you.
