@@ -4,10 +4,7 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , http = require('http')
-  , path = require('path')
-  , spotify = require('spotify.js')
-  , redis = require('redis').createClient();
+  , http = require('http');
 
 var app = express();
 
