@@ -28,15 +28,18 @@ function get_urb(cb){
 }
      
 
+process.on('uncaughtException',console.log);
+
 function slurp_artist(name){
   spotify.artists( name, function(err, artists) {
     console.log('Artists results:', artists);
   });
 
 }
+
 function slurp_search(){
   get_urb(function(rand){
-console.log(rand);
+  console.log(rand);
   try{
     var timeout = 0;
     var done = false;
@@ -51,7 +54,7 @@ console.log(rand);
       } else {
         if(typeof track.href !='undefined'){
           if(track.album.availability.territories.indexOf('US') != -1){
-            redis.sadd(  'total_rando' , track.href.split(':')[2], console.log);  
+            redis.sadd(  'total_rando' , track.href.split(':')[2], function(){});  
 		if(done){
 			slurp_search();
 		}
