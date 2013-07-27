@@ -1,9 +1,7 @@
 spotify-roulette
 ================
 
-A button that opens a completely random spotify track.
-
-
+Get completely random spotify tracks.
 
 The code is a little messy but it's short and sweet. 
 [Spotify Roulette](http:/dream.ai)
