@@ -3,6 +3,8 @@ spotify-roulette
 
 Get completely random spotify tracks.
 
+Disclaimer: hard coded to only injest US region tracks.  Most reasonable pull requests accepted.
+
 The code is a little messy but it's short and sweet. 
 [Spotify Roulette](http:/dream.ai)
 
