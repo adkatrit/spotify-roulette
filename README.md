@@ -35,3 +35,10 @@ Swap:            0          0          0
 It uses urbandictionary.com/random.php and instead of following the 302 redirect to a random page, It searches spotify and streams the result to a set in redis.
 When you click for a random song, it is issuing the redis command [SRANDMEMBER](http://redis.io/commands/srandmember)
 and returning the result(a spotify url) to some javascript, which then opens a window for you.
+
+
+##Update
+You can now use http://dream.ai/random  to be 302 redirected to a completely random spotify track.   
+This is useful for the ability to create a "spotify roulette" browser bookmark.  This can also be used as a pseudo-app for iphone by using the 'Add to Home' feature in safari.
+
+You won't be able to 'Add to Home' without tricking your iphone safari browser to going to the page when you have no internet connection,  enabling the internet connection, and then quickly refreshing and hitting 'Add to Home'.
