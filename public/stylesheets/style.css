@@ -3875,7 +3875,9 @@ body.vjs-full-window {
 .mal {
   margin-left: 20px;
 }
-
+.center a {
+  margin-left: 8px;
+}
 .center {
 /*  margin:auto auto;*/
   text-align:center;
@@ -3886,4 +3888,13 @@ body.vjs-full-window {
 }
 .center div {
    margin:21px;
+}
+iframe {
+  margin: auto;
+}
+#gh img{
+position:absolute;
+height:50px;
+top:5px;
+left:5px;
 }
