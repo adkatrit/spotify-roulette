@@ -418,14 +418,12 @@ you can use the generic selector below, but it's slower:
 }
 body {
   color: #34495e;
+  height:100%;
+  width:100%;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   line-height: 1.231;
-  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #aaaaaa), color-stop(100%, #444444));
-  background-image: -webkit-radial-gradient(#aaaaaa, #444444);
-  background-image: -moz-radial-gradient(#aaaaaa, #444444);
-  background-image: -o-radial-gradient(#aaaaaa, #444444);
-  background-image: radial-gradient(#aaaaaa, #444444);
+  background-image: url(https://raw.github.com/subtlepatterns/SubtlePatterns/master/bgnoise_lg.png);
 }
 
 
@@ -3879,9 +3877,13 @@ body.vjs-full-window {
 }
 
 .center {
-  margin:auto auto;
+/*  margin:auto auto;*/
   text-align:center;
-  margin-top: 20%;
-  height: 105px;
-  width: 388px;
+  height: 103px;
+  width: 100%;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+}
+.center div {
+   margin:21px;
 }

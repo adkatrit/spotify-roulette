@@ -3,6 +3,7 @@ extends layout
 block content
   div(class='center')
     h1= title
-    //p Welcome to #{title}
     div
-      a(class='btn btn-large btn-block btn-info', id="rando", href="#") rando that ish
+      a(class='btn btn-large btn-block btn-info', id="rando", href="#") get a random track
+      a(class='btn btn-large',href="/weighted_random") redirect
+  iframe(id="view-port",width="100%",height="100%", seamless, class="animated")

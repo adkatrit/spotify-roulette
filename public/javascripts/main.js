@@ -7,12 +7,10 @@ _gaq.push('_trackPageview', 'rando_button');
 		if(typeof _gaq != 'undefined'){
 			_gaq.push('_trackPageview', url);
 		}
-		window.open(url);
-		// jsPopunder(url, {
-		//     name: 'Spotify-Roulette', 
-		//     width: 800, 
-		//     height: 800
-		// });	
+		document.getElementById('view-port').src = url;
 	});
 }
-
+$(document).ready(function(){
+	
+	$('.center').addClass('bounceInUp');
+});
