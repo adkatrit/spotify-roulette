@@ -6,10 +6,10 @@ Get completely random spotify tracks.
 Disclaimer: hard coded to only injest US region tracks.  Most reasonable pull requests accepted.
 
 The code is a little messy but it's short and sweet. 
-[Spotify Roulette](http:/dream.ai)
+[Spotify Roulette](http:/suckmydata.com)
 
 for a 302 instead:
-http://dream.ai/random
+http://suckmydata.com/random
 
 First you run slurp.js to connect the urbandictionary.com/random.php result to the search function of spotify.
 the results are then streamed to redis for your listening pleasure.
