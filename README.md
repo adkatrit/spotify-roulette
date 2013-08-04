@@ -43,7 +43,7 @@ and returning the result(a spotify url) to some javascript, which then opens a w
 A random number is chosen between 5 and the sum of all popularity values on spotify.  The resulting number is used as the min in [ZREVRANGEBYSCORE](http://redis.io/commands/zrevrangebyscore) to draw from the cumulative frequency distribution above.
 For getting a playlist, this is done multiple times.
 
-##Update
+##Updates
 Converted all spotify front-end to spotify hosted embeds.
 
 Generate a random playlist!
