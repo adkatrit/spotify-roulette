@@ -41,11 +41,11 @@ and returning the result(a spotify url) to some javascript, which then opens a w
 
 ##Update
 Converted all spotify front-end to spotify hosted embeds.
-===============================
+------------------------------------
 Generate a random playlist!
-================================
+------------------------------------
 Weighted Random lookup is functional.  Select tracks pseudo-randomly based on track popularity, the higher the popularity, the more likely it is you'll get that track.
-================================
+------------------------------------
 You can now use http://suckmydata.com/random  to be 302 redirected to a completely random spotify track.   
 This is useful for the ability to create a "spotify roulette" browser bookmark.  This can also be used as a pseudo-app for iphone by using the 'Add to Home' feature in safari.
 
