@@ -6,7 +6,7 @@ It uses spotify's search feature to scrape track uri's and their popularity.
 
 Disclaimer: hard coded to only injest US region tracks.  Reasonable pull requests accepted.
 
-[Spotify Roulette](http:/suckmydata.com)
+[Spotify Roulette](http://spotify.suckmydata.com)
 
 
 
