@@ -10,7 +10,3 @@ _gaq.push('_trackPageview', 'rando_button');
 		document.getElementById('view-port').src = url;
 	});
 }
-$(document).ready(function(){
-	
-	$('.center').addClass('bounceInUp');
-});
