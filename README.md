@@ -2,11 +2,14 @@ spotify-roulette
 ================
 
 Get completely random spotify tracks.
+It uses spotify's search feature to scrape track uri's and their popularity.
 
-Disclaimer: hard coded to only injest US region tracks.  Most reasonable pull requests accepted.
+Disclaimer: hard coded to only injest US region tracks.  Reasonable pull requests accepted.
 
-The code is a little messy but it's short and sweet. 
 [Spotify Roulette](http:/suckmydata.com)
+
+
+
 
 for a 302 instead:
 http://suckmydata.com/random
