@@ -17,12 +17,12 @@ the results are then streamed to redis for your listening pleasure.
 
 I use this for monitoring
 ```bash
-watch -n1 'redis-cli scard total_rando && free -m'
+watch -n1 'redis-cli scard sorted_total_rando && free -m'
 ```
 
 This will show you, every second, the total tracks you've slurped and your current ram usage
 ```bash
-Every 1.0s: redis-cli scard total_rando && free -m                                                                                                                                                                                          Thu Jul 25 02:16:22 2013
+Every 1.0s: redis-cli scard sorted_total_rando && free -m                                                                                                                                                                                          Thu Jul 25 02:16:22 2013
 
 1082631
              total       used       free     shared    buffers     cached
@@ -40,7 +40,7 @@ and returning the result(a spotify url) to some javascript, which then opens a w
 
 
 ##Update
-You can now use http://dream.ai/random  to be 302 redirected to a completely random spotify track.   
+You can now use http://suckmydata.com/random  to be 302 redirected to a completely random spotify track.   
 This is useful for the ability to create a "spotify roulette" browser bookmark.  This can also be used as a pseudo-app for iphone by using the 'Add to Home' feature in safari.
 
 You won't be able to 'Add to Home' without tricking your iphone safari browser to going to the page when you have no internet connection,  enabling the internet connection, and then quickly refreshing and hitting 'Add to Home'.
