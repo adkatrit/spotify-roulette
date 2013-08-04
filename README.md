@@ -15,7 +15,7 @@ First you run slurp.js to connect the urbandictionary.com/random.php result to t
 the results are then streamed to redis for your listening pleasure.
 
 
-I use this for monitoring
+I use this for monitoring the url ingestion
 ```bash
 watch -n1 'redis-cli scard sorted_total_rando && free -m'
 ```
