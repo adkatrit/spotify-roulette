@@ -1,5 +1,5 @@
 var _gaq = _gaq || [];
-function pv(r){ _gaq && _gaq.push('_trackPageview', r)}
+function pv(r){ _gaq && _gaq.push(['_trackPageview', r])}
 function viewport(r){document.getElementById('view-port').src = r;}
 function get_random_song(){
   pv('rando_button');
