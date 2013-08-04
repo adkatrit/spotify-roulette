@@ -311,3 +311,20 @@ iframe {
   top:5px;
   left:5px;
 }
+@media only screen and (max-width: 480px) {
+  .center{
+    margin-top:60px;
+    text-align:left;
+
+  }
+  .center div {
+    
+  }
+  .center div a {
+    float:left;
+    margin-bottom:20px;
+  }
+  iframe{
+    float:left;
+  }
+}
