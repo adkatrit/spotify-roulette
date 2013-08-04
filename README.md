@@ -12,7 +12,7 @@ Disclaimer: hard coded to only injest US region tracks.  Reasonable pull request
 
 
 for a 302 instead:
-http://suckmydata.com/random
+http://spotify.suckmydata.com/random
 
 First you run slurp.js to connect the urbandictionary.com/random.php result to the search function of spotify.
 the results are then streamed to redis for your listening pleasure.
