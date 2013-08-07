@@ -40,7 +40,7 @@ Swap:            0          0          0
 It uses urbandictionary.com/random.php and instead of following the 302 redirect to a random page, It searches spotify and streams the result to a sorted set in redis.  The sorted set is ranked by popularity.  When all needed urls are scraped, /scripts/sum.py is run to generate the cumulative frequency distribution from which we will draw to get a weighted random lookup.
 When you click for a random song, ~~it is issuing the redis command [SRANDMEMBER](http://redis.io/commands/srandmember)
 and returning the result(a spotify url) to some javascript, which then opens a window for you.~~
-A random number is chosen between 5 and the sum of all popularity values on spotify.  The resulting number is used as the min in [ZREVRANGEBYSCORE](http://redis.io/commands/zrevrangebyscore) to draw from the cumulative frequency distribution above.
+a random number is chosen between 5 and the sum of all popularity values on spotify.  The resulting number is used as the min in [ZREVRANGEBYSCORE](http://redis.io/commands/zrevrangebyscore) to draw from the cumulative frequency distribution above.
 For getting a playlist, this is done multiple times.
 
 ##Updates
