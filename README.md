@@ -42,7 +42,7 @@ Generate a random playlist!
 
 Weighted Random lookup is functional.  Select tracks pseudo-randomly based on track popularity, the higher the popularity, the more likely it is you'll get that track.
 
-You can now use http://suckmydata.com/random  to be 302 redirected to a completely random spotify track.   
+You can now use /random  to be 302 redirected to a completely random spotify track.   
 This is useful for the ability to create a "spotify roulette" browser bookmark.  This can also be used as a pseudo-app for iphone by using the 'Add to Home' feature in safari.
 
 You won't be able to 'Add to Home' without tricking your iphone safari browser to going to the page when you have no internet connection,  enabling the internet connection, and then quickly refreshing and hitting 'Add to Home'.
