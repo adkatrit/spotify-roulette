@@ -46,3 +46,7 @@ You can now use /random  to be 302 redirected to a completely random spotify tra
 This is useful for the ability to create a "spotify roulette" browser bookmark.  This can also be used as a pseudo-app for iphone by using the 'Add to Home' feature in safari.
 
 You won't be able to 'Add to Home' without tricking your iphone safari browser to going to the page when you have no internet connection,  enabling the internet connection, and then quickly refreshing and hitting 'Add to Home'.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/adkatrit/spotify-roulette/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
