@@ -37,34 +37,28 @@ function store_in_set(track){
   }
 }
 //stream random spotify search results to redis
-function slurp_search(rand,cb){
- // get_urb(function(rand){
-console.log(rand);
-
+function slurp_search(idx,cb){
+  var word=txt[idx]
+  get_urb(function(rand){
     try{
+      rand = rand.replace('+',' ');
       spotify.tracks(rand).forEach(function(track) {
         if (track === null) {
           //end of search result list
-          //cb()
-          //slurp_search();
-          
+          cb("done! "+word+" || "+rand);
+          slurp_search(++idx,cb)
         } else {
           store_in_set(track);
-          
         }
       });
     }catch(e){
-      console.log('fusj');
      console.log(e);
     }
-  //});
+  });
 }
 
 
 process.on('uncaughtException',console.log);
 
-txt.forEach(function(w){
-  slurp_search(w);
-});
-
-
+var idx=0;
+slurp_search(idx,console.log);

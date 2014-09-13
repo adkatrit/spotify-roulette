@@ -5,7 +5,16 @@
 
 var redis = require('redis').createClient();
 var spotify = require('spotify.js');
-
+exports.randomkey = function(req, res){
+	var total = 0;
+	redis.zcard('summed_total_rando',function(err,num){
+		var randInt = Math.floor(0+Math.random()*num);
+		console.log(randInt)
+		redis.zrange('summed_total_rando',randInt,randInt,function(err,result){
+			res.end(result[0]);
+		});
+	});
+}
 
 function get_rando(min,max,cb){
 	console.log(min,max)
@@ -112,12 +121,12 @@ exports.weighted_random = function(req,res){
 	
 
 };
-
-exports.randomkey = function(req,res){
-	get_rando(5,21583176426,function(url,rando){
-		res.end(url);
-	});
-}
+// exports.one_random_song = one_random_song;
+// exports.randomkey = function(req,res){
+// 	get_rando(5,21583176426,function(url,rando){
+// 		res.end(url);
+// 	});
+// }
 exports.randomlist = function(req,res){
 	get_rando_list(5,21583176426,function(url){
 		res.end(url);

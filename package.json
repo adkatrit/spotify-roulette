@@ -1,27 +1,18 @@
 {
-  "name": "application-name",
+  "name": "spotify-roulette",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "start": "node app"
-  },
   "dependencies": {
     "express": "3.0.3",
-    "jade": "*",
+    "jade": "1.6.0",
     "twit": "~1.1.8",
     "redis": "~0.8.4",
-    "spotify.js": "0.0.1",
-    "jQuery": "~1.7.4",
+    "spotify.js": "0.2.0",
+    "jQuery": "*",
     "xmlhttprequest": "~1.6.0",
     "jsdom": "~0.8.2",
     "redis-stream": "~0.1.0",
     "tap": "~0.4.3",
     "hiredis": "~0.1.15"
-  },
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-develop": "~0.0.2",
-    "grunt-regarde": "~0.1.1",
-    "grunt-contrib-livereload": "~0.1.2"
   }
 }

@@ -27,6 +27,7 @@ app.get('/random', routes.random);
 app.get('/weighted_random', routes.weighted_random);
 app.get('/randomkey',routes.randomkey);
 app.get('/randomlist',routes.randomlist);
+app.get('/one',routes.one_random_song);
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });

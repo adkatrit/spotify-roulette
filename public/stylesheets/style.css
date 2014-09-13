@@ -303,7 +303,8 @@ h6 {
    margin:21px;
 }
 iframe {
-  margin: auto;
+  margin: 0 auto;
+  display: block;
 }
 #gh img{
   position:absolute;
