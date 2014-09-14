@@ -20,11 +20,6 @@ function get_urb(cb){
    console.log("Got error: " + e.message);
   });
 }
-//TODO
-function process_zset(){
-  //go through all in order, storing the cumulative weights in a new zset
-  //and storing each key into total_rando to keep other functionality.
-}
 
 
 //store a word in the total_rando set
@@ -39,9 +34,12 @@ function store_in_set(track){
 //stream random spotify search results to redis
 function slurp_search(idx,cb){
   var word=txt[idx]
+  console.log(word);
   get_urb(function(rand){
+    console.log(rand);
     try{
-      rand = rand.replace('+',' ');
+      rand = rand.replace(/\+/g,' ');
+      console.log(rand);
       spotify.tracks(rand).forEach(function(track) {
         if (track === null) {
           //end of search result list

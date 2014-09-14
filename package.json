@@ -4,15 +4,15 @@
   "private": true,
   "dependencies": {
     "express": "3.0.3",
+    "hiredis": "~0.1.15",
     "jade": "1.6.0",
-    "twit": "~1.1.8",
-    "redis": "~0.8.4",
-    "spotify.js": "0.2.0",
-    "jQuery": "*",
-    "xmlhttprequest": "~1.6.0",
     "jsdom": "~0.8.2",
+    "redis": "~0.8.4",
     "redis-stream": "~0.1.0",
+    "spotify.js": "0.2.0",
     "tap": "~0.4.3",
-    "hiredis": "~0.1.15"
+    "twit": "~1.1.8",
+    "underscore": "^1.7.0",
+    "xmlhttprequest": "~1.6.0"
   }
 }

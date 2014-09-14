@@ -17,6 +17,8 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
+  app.use(express.cookieParser());
+  app.use(express.session({secret: 'sKjeB2wcEe/c86)pNDovWm[3j8g]m$DF'}));
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
 });
@@ -28,6 +30,7 @@ app.get('/weighted_random', routes.weighted_random);
 app.get('/randomkey',routes.randomkey);
 app.get('/randomlist',routes.randomlist);
 app.get('/one',routes.one_random_song);
+app.get('/clear',routes.clear);
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
